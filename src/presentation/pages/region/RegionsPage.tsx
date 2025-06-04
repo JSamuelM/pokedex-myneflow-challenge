@@ -19,6 +19,7 @@ export const RegionsPage = () => {
 
   return (
     <div>
+      <h1 className="text-4xl text-center font-bold mb-10">Regions</h1>
       <RegionList regions={regions} />
     </div>
   )

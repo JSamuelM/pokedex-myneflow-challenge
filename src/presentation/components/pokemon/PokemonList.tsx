@@ -8,7 +8,7 @@ interface Props {
 
 export const PokemonList = ({ pokemons }: Props) => {
   return (
-    <div className='mt-10 grid grid-cols-1 gap-4 justify-items-center sm:grid-cols-2 sm:justify-center md:grid-cols-3 lg:grid-cols-4'>
+    <div className='mt-10 grid grid-cols-1 gap-4 gap-y-6 justify-items-center sm:grid-cols-2 sm:justify-center md:grid-cols-3 lg:grid-cols-4'>
       {
         pokemons.map((pokemon) => (
           <Link to={`/pokemon/${pokemon.id}`} key={pokemon.id} className='block w-full'>
