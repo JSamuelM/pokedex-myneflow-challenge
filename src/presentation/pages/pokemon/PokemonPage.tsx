@@ -7,6 +7,8 @@ import { PokemonStat } from '../../components/pokemon/PokemonStat';
 import { PokemonAbility } from '../../components/pokemon/PokemonAbility';
 import { useFavoritesStore } from '../../../stores/favorites/favorites.store';
 import { Favorite } from '../../components/ui/Favorite';
+import { LoadingData } from '../../shared/LoadingData';
+import { ErrorData } from '../../shared/ErrorData';
 
 type PokemonParams = {
   pokemonId: string;
@@ -33,11 +35,11 @@ export const PokemonPage = () => {
   }
 
   if (isLoading) {
-    return <div>Loading pokemon...</div>
+    return <LoadingData />
   }
 
   if (error) {
-    return <div>Failed to obtain Pokemon from the { pokemonId } region</div>
+    return <ErrorData message="Failed to obtain Pokemon from the { pokemonId } region" />
   }
 
   return (

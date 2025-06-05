@@ -1,6 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import { getRegions } from '../../../actions/get-regions';
 import { RegionList } from '../../components/region/RegionList';
+import { LoadingData } from '../../shared/LoadingData';
+import { ErrorData } from '../../shared/ErrorData';
 
 export const RegionsPage = () => {
 
@@ -10,11 +12,11 @@ export const RegionsPage = () => {
   });
 
   if (isLoading) {
-    return <div className='font-bold text-xl'>⌛ Loading regions...</div>
+    return <LoadingData />
   }
 
   if (error) {
-    return <div>❌ Error fetching regions...</div>
+    return <ErrorData message="Error fetching regions..." />
   }
 
   return (

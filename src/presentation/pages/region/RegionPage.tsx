@@ -3,6 +3,8 @@ import { useQuery } from '@tanstack/react-query'
 import { useRegionsStore } from '../../../stores/regions/regions.store'
 import { getPokemons } from '../../../actions/get-pokemons'
 import { PokemonList } from '../../components/pokemon/PokemonList'
+import { LoadingData } from '../../shared/LoadingData'
+import { ErrorData } from '../../shared/ErrorData'
 
 type RegionParams = {
   regionName: string;
@@ -21,11 +23,11 @@ export const RegionPage = () => {
   });
 
   if (isLoading) {
-    return <div>Loading pokemons...</div>
+    return <LoadingData />
   }
 
   if (error) {
-    return <div>Failed to obtain Pokemon from the { regionData?.name } region</div>
+    return <ErrorData message={`Failed to obtain Pokemon from the ${ regionData?.name } region`} />
   }
 
   return (
