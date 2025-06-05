@@ -42,7 +42,7 @@ const initialRegionData: Region[] = [
 ]
 
 // For getting limit pokemon's ids
-export const useRegionsStore = create<RegionState>()((set, get) => ({
+export const useRegionsStore = create<RegionState>()((_set, get) => ({
   regions: initialRegionData, // init data
 
   getRegionByName: (name: string) => {
