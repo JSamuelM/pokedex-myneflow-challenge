@@ -5,7 +5,7 @@ interface Props {
   region: Region;
 }
 
-const urlCoverImages = `./src/assets/regions`;
+const urlCoverImages = `/assets/regions`;
 
 export const RegionCard = ({ region }: Props) => {
   return (
