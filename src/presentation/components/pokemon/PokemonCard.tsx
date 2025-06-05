@@ -5,7 +5,7 @@ interface Props {
   pokemon: Pokemon;
 }
 
-const typeImagesPath = '../../../assets/pokemon-types'
+const typeImagesPath = '/assets/pokemon-types'
 
 export const PokemonCard = ({ pokemon }: Props) => {
   return (

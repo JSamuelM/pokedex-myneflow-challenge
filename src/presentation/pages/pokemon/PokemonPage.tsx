@@ -85,11 +85,6 @@ export const PokemonPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Evolution chain */}
-      <div className='bg-white rounded-lg shadow-xl'>
-        <p>Evolution chain</p>
-      </div>
     </div>
   )
 }
