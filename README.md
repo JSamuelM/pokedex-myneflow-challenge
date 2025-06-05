@@ -25,6 +25,17 @@
 npm test
 ```
 
+I had to brush up a bit on how the tests work and tried to use Vitest, as it is something I had not used before, instead it was Jest.
+
+
+### Notes
+- **State Management**:
+    For the status of the application I decided to use Zustand, because I think it is very easy to use and simpler.
+
+- **API calls**: From my previous experience using React, for the API calls I use React Query [React Query](https://tanstack.com/query/latest/docs/framework/react/overview)
+
+- **Design**: In addition to using TailwindCSS, I based it on the following example (Pokedex Website Concept)[https://www.behance.net/gallery/113562309/Pokemon-Pokedex-Website-Redesign-Concept]
+
 ### Vite
 
 This project working in Vite with HMR and some ESLint rules.
